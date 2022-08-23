@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DT Contacts App Version 2">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>DT Contacts</title>
+</head>
+<body onload="main()">
+    <div class="load"></div>
+    <div class="main">
+        <div class="top-bar">
+            <div class="search-icon fa-solid fa-magnifying-glass fa-2x"></div>
+            <div class="search-input">
+                <input type="text" name="name-search" id="name-search">
+            </div>
+            <div class="app-options fa-solid fa-ellipsis fa-2x"></div>
+            <button class="my-profile-button">My Profile &nbsp;&nbsp; <i class="fa-solid fa-user"> &nbsp;>></i></button>
+        </div>
+        <div class="main-view">
+            <button class="new-contact-button">Create New Contact</button>
+            <div class="dail-pad">
+                <i class="fa-solid fa-keyboard fa-2x"></i>
+            </div>
+        </div>
+        <div class="dail">
+            <input type="tel" name="dail-number" id="dail-number" class="dail-value">
+            <div class="dail-buttons">
+                <div class="dail-button">1</div>
+                <div class="dail-button">2</div>
+                <div class="dail-button">3</div>
+                <div class="dail-button">4</div>
+                <div class="dail-button">5</div>
+                <div class="dail-button">6</div>
+                <div class="dail-button">7</div>
+                <div class="dail-button">8</div>
+                <div class="dail-button">9</div>
+                <div class="dail-button">*</div>
+                <div class="dail-button">0</div>
+                <div class="dail-button">#</div>
+                <div class="dail-button dail-down">|</div>
+                <div class="dail-button dail-cancel">&lt;-</div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="contacts-tab-button"><i class="fa-solid fa-address-book"></i>Contacts</div>
+            <div class="favorites-tab-button"><i class="fa-solid fa-star"></i>Favorites</div>
+        </div>
+    </div>
+    <script src="./contacts.js"></script>
+</body>
+</html>
