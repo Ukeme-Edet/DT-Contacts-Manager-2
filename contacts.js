@@ -13,23 +13,41 @@ function elt(type, classes, props, ...childern) {
 
 function main() {
     dailpad.addEventListener("click", dailpadClick);
-    dailDown.addEventListener("click", dailDownClick)
+    dailDown.addEventListener("click", dailDownClick);
 }
 
-function dailpadClick(e) {
-    bounceOut(e.target);
-    dail.classList.add("dail-up");
+function dailpadClick() {
+    setTimeout(() => {
+        dailpad.style.display = "none";
+    }, 500);
+    bounceOut(dailpad);
+    dailpad.classList.add("transparent");
+    dail.style.display = "flex";
+    setTimeout(() => {
+        dail.classList.add("dail-up");
+    }, 1);
     mainView.classList.add("main-view-dail");
 }
 
 function dailDownClick() {
     ripple();
+    dailpad.style.display = "flex";
+    setTimeout(() => {
+        dailpad.style.bottom = "0vh";
+        dailpad.classList.remove("transparent");
+    }, 1);
+    setTimeout(() => {
+        dailpad.style.bottom = "";
+    }, 100)
     dail.classList.remove("dail-up");
     mainView.classList.remove("main-view-dail");
 }
 
 function bounceOut(target) {
-
+    target.style.animation = "bounceOut .25s ease-in 0s";
+    setTimeout(() => {
+        target.style.animation = "";
+    }, 250);
 }
 
 function ripple() {
